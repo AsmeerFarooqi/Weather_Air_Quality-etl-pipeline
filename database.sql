@@ -1,0 +1,31 @@
+CREATE DATABASE WEATHERDB
+
+--CREATUNG WEATHER TABLE
+CREATE TABLE weatherdata (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    city VARCHAR(100) NOT NULL,
+    temp DECIMAL(6,2) NOT NULL,
+    humidity INT NOT NULL,
+    feels_like DECIMAL(6,2) NOT NULL,
+    pressure INT NOT NULL,
+    description VARCHAR(255),
+    extracted_at DATETIME2 NOT NULL
+);
+--CREATING AIRQUALITY TABLE
+CREATE TABLE AirQuality (
+    air_id INT PRIMARY KEY IDENTITY(1,1),
+    city VARCHAR(100) NOT NULL,
+    CO DECIMAL(10,2),
+    NO DECIMAL(10,2),
+    NO2 DECIMAL(10,2),
+    O3 DECIMAL(10,2),
+    SO2 DECIMAL(10,2),
+    NH3 DECIMAL(10,2),
+    extracted_at DATETIME2 NOT NULL
+);
+
+SELECT *
+FROM weatherdata
+
+Select *
+from AirQuality
